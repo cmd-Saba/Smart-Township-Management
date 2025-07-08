@@ -1,0 +1,109 @@
+<!-- index.html (Login Page) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Township HAL - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Titillium+Web:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body.login-page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #0a0f1a;
+      margin: 0;
+      font-family: 'Titillium Web', sans-serif;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #00fff7;
+      font-weight: 600;
+    }
+
+    input, button {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border-radius: 10px;
+      border: none;
+      background: #111827;
+      color: #00fff7;
+      font-size: 1rem;
+      font-family: 'Titillium Web', sans-serif;
+    }
+
+    input::placeholder {
+      color: #7eeaff;
+    }
+
+    button {
+      background: linear-gradient(135deg, #00fff7, #007c99);
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #00fff7;
+    }
+
+    .admin-link {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #7eeaff;
+      text-decoration: underline;
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .bg-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="login-page">
+  <div id="particles-js"></div>
+  <div class="bg-overlay"></div>
+  <div class="container login-container">
+    <h1>Welcome to Smart Township HAL</h1>
+    <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+      <input type="text" placeholder="User ID" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <a href="#" class="admin-link">Admin Login</a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
+

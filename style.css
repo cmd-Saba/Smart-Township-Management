@@ -1,0 +1,138 @@
+/* GLOBAL RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Titillium Web', 'Orbitron', sans-serif;
+  color: #ffffff;
+}
+
+body {
+  background: #0a0f1a;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.full-height {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HEADINGS */
+h1, h2 {
+  color: #00fff7;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+/* LOGIN FORM STYLES */
+.login-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+input, button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  border: none;
+  background: #111827;
+  color: #00fff7;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #7eeaff;
+}
+
+button {
+  background: linear-gradient(135deg, #00fff7, #007c99);
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00fff7;
+}
+
+.admin-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #7eeaff;
+  text-decoration: underline;
+}
+
+/* GRID CARD STYLES */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.card-grid.large .card {
+  min-height: 140px;
+  font-size: 1.2rem;
+}
+
+.card {
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid #00fff7;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+  background: rgba(0, 255, 255, 0.08);
+}
